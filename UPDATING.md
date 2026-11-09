@@ -39,7 +39,7 @@ Research positions are in `data/experience.yaml`. To add teaching, ask your assi
 Replace `static/files/cv.pdf` with the new version, keeping the same filename.
 
 ## Change your photo
-Replace `static/images/photo-square.jpg` (square crop, shown on the page) and `static/images/photo.jpg` (used when the site is shared on social media).
+Replace `static/images/photo.jpg`, keeping the same filename. It is shown uncropped, so any shape works. If the new photo has different proportions, update the `width`/`height` numbers on the `<img>` tag in `layouts/partials/profile.html` to match its pixel size.
 
 ## Change the look of the site
 Colors are the `--color-*` values at the top of `assets/css/style.css`. To redesign more broadly, ask your assistant to run the design quest at https://gking.harvard.edu/mysite/files/QUEST_DESIGN.md; the current design is recorded in `hugo.yaml` under `params.mysite.design`.
