@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+<p><a class="button" href="{{ "files/cv.pdf" | relURL }}" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+<object class="cv-embed" data="{{ "files/cv.pdf" | relURL }}" type="application/pdf" aria-label="CV">
+  <p>Your browser cannot display the PDF here. <a href="{{ "files/cv.pdf" | relURL }}">Open the CV</a>.</p>
+</object>
+{{ end }}

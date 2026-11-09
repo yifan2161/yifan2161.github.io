@@ -1,0 +1,22 @@
+# Status values: published, accepted, revise and resubmit, under review,
+# working paper, work in progress, thesis
+- title: "Taking Leave, Taking Risks: Gender and Workplace Stigma in Parental Leave Evaluations"
+  authors: ["Yifan (Linda) Wang"]
+  year: 2026
+  status: "thesis"
+  badge: "Honors thesis"
+  venue: "Undergraduate Honors Thesis, Department of Sociology, Vanderbilt University"
+  pdf: ""
+  link: ""
+  description: "A randomized 2×2 factorial vignette experiment with 200 U.S. respondents estimating how employee gender and parental leave duration affect workplace stigma."
+  job_market_paper: false
+
+- title: "Global plastic ban policy and its potential of bamboo as a substitute for plastic [全球禁塑政策与中国“以竹代塑”潜力]"
+  authors: ["Fu, J.", "Wang, Y.", "Shen, G.", "Li, Y."]
+  year: 2024
+  status: "published"
+  badge: "Conference proceedings"
+  venue: "Proceedings of the 2024 Conference on High-Quality Development of the Bamboo as a Substitute for Plastic Industry"
+  pdf: ""
+  link: ""
+  job_market_paper: false

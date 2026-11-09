@@ -1,0 +1,48 @@
+baseURL: "https://yifan2161.github.io/"
+title: "Yifan (Linda) Wang"
+languageCode: en-us
+enableRobotsTXT: false
+
+params:
+  description: "MPP Candidate, Harvard Kennedy School"
+  author: "Yifan (Linda) Wang"
+  role: "MPP Candidate"
+  institution: "Harvard Kennedy School"
+  university: "Harvard University"
+  tagline: "I study how social institutions, organizational practices, and technological change shape human behavior and inequality."
+  email: "yifan_wang@hks.harvard.edu"
+  linkedin: "https://www.linkedin.com/in/linda-wang-519260267"
+  photo: "images/photo-square.jpg"
+  ogImage: "images/photo.jpg"
+  mysite:
+    credit: true
+    discovery: true
+    design:
+      seed: "reference-site"
+      concept: "Modeled on robertavaltorta.com: grey top bar, full-width banner, square photo in a profile sidebar overlapping the banner, large 'About me' heading, crimson links, Open Sans-style sans serif."
+
+menu:
+  main:
+    - name: Home
+      url: "/"
+      weight: 10
+    - name: Research
+      url: "/research/"
+      weight: 20
+    - name: CV
+      url: "/cv/"
+      weight: 30
+    - name: Contact
+      url: "/#contact"
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home: ["HTML"]
+  section: ["HTML"]
+
+disableKinds: ["taxonomy", "term", "RSS"]

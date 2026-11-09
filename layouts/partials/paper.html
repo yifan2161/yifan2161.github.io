@@ -1,0 +1,15 @@
+<li class="paper">
+  {{ $url := or .pdf .link }}
+  <div>
+    {{ if $url }}<a class="paper-title" href="{{ if .pdf }}{{ .pdf | relURL }}{{ else }}{{ .link }}{{ end }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}<span class="paper-title">{{ .title }}</span>{{ end }}
+    {{ with .badge }}<span class="badge">{{ . }}</span>{{ end }}
+  </div>
+  <div class="meta">
+    {{- $n := len .authors -}}
+    {{- range $i, $a := .authors -}}{{ if $i }}{{ if eq (add $i 1) $n }}, &amp; {{ else }}, {{ end }}{{ end }}{{ if eq $a site.Params.author }}<strong>{{ $a }}</strong>{{ else if eq $a "Wang, Y." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}
+    {{- $last := index .authors (sub $n 1) -}}
+    {{- if not (strings.HasSuffix $last ".") }}.{{ end }}
+    {{- with .venue }} <em>{{ . }}</em>{{ end }}{{ with .year }}, {{ . }}{{ end }}.
+  </div>
+  {{ with .description }}<p class="paper-desc">{{ . }}</p>{{ end }}
+</li>

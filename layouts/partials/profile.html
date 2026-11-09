@@ -1,0 +1,11 @@
+<aside class="profile" aria-label="Profile">
+  <img class="profile-photo" src="{{ site.Params.photo | relURL }}" alt="Portrait of {{ site.Params.author }}" width="210" height="210">
+  <p class="profile-name">{{ site.Params.author }}</p>
+  <p class="profile-role">{{ site.Params.role }}</p>
+  <p class="profile-inst">{{ site.Params.institution }}<br>{{ site.Params.university }}</p>
+  <ul class="profile-links">
+    <li><a href="mailto:{{ site.Params.email }}"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Email</a></li>
+    <li><a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM2.3 8.5h3.4V21H2.3zM9 8.5h3.2v1.7h.1c.5-.9 1.6-2 3.4-2 3.6 0 4.3 2.4 4.3 5.4V21h-3.4v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V21H9z"/></svg>LinkedIn</a></li>
+    <li><a href="{{ "files/cv.pdf" | relURL }}" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M14 2v6h6M9 13h8M9 17h8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>CV (PDF)</a></li>
+  </ul>
+</aside>

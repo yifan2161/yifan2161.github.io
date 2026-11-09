@@ -1,0 +1,39 @@
+{{ define "main" }}
+<h1 class="page-title">About me</h1>
+<p class="lead">{{ site.Params.tagline }}</p>
+
+<div class="prose">
+{{ .Content }}
+</div>
+
+{{ with site.Data.interests }}
+<section id="interests" class="section">
+  <h2>Research interests</h2>
+  <ul class="tags">
+    {{ range . }}<li>{{ . }}</li>{{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ with site.Data.education }}
+<section id="education" class="section">
+  <h2>Education</h2>
+  <ul class="entries">
+    {{ range . }}
+    <li class="entry">
+      <div class="entry-head"><strong>{{ .degree }}</strong><span class="meta">{{ .years }}</span></div>
+      <div>{{ .institution }}</div>
+      {{ with .details }}<div class="meta">{{ . }}</div>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a><br>
+  {{ site.Params.institution }}, {{ site.Params.university }}, Cambridge, MA<br>
+  <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></p>
+</section>
+{{ end }}

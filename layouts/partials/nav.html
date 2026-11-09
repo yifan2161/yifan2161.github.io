@@ -1,0 +1,14 @@
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="Main">
+    <a class="brand" href="{{ "/" | relURL }}"><strong>{{ site.Title }}</strong></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+      {{ $active := or (and (eq .URL "/") $current.IsHome) (and (ne .URL "/") (not (strings.Contains .URL "#")) (strings.HasPrefix $current.RelPermalink .URL)) }}
+      <li><a href="{{ .URL | relURL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

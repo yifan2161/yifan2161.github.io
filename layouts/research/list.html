@@ -1,0 +1,60 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+{{ $papers := site.Data.papers }}
+{{ $jmp := where $papers "job_market_paper" true }}
+{{ range $jmp }}
+<article class="jmp">
+  <span class="badge">Job market paper</span>
+  <h3>{{ if .pdf }}<a href="{{ .pdf | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
+  {{ with .abstract }}<p>{{ . }}</p>{{ end }}
+</article>
+{{ end }}
+
+{{ $current := where (where $papers "job_market_paper" "!=" true) "status" "in" (slice "work in progress" "working paper" "under review" "revise and resubmit" "thesis") }}
+{{ with $current }}
+<section class="section" id="current">
+  <h2>Current research</h2>
+  <ul class="papers">
+    {{ range . }}{{ partial "paper.html" . }}{{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ $pubs := where $papers "status" "in" (slice "published" "accepted") }}
+{{ with $pubs }}
+<section class="section" id="publications">
+  <h2>Publications</h2>
+  <ul class="papers">
+    {{ range . }}{{ partial "paper.html" . }}{{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ with site.Data.presentations }}
+<section class="section" id="presentations">
+  <h2>Presentations</h2>
+  <ul class="papers">
+    {{ range . }}
+    <li class="paper"><span class="paper-title">{{ .title }}</span><div class="meta">{{ .venue }}, {{ .year }}</div></li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ with site.Data.experience }}
+<section class="section" id="experience">
+  <h2>Research experience</h2>
+  <ul class="entries">
+    {{ range . }}
+    <li class="entry">
+      <div class="entry-head"><strong>{{ .org }}</strong><span class="meta">{{ .years }}</span></div>
+      <div class="meta">{{ .role }}</div>
+      {{ with .description }}<p>{{ . }}</p>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

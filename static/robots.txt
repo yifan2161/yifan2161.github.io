@@ -1,0 +1,5 @@
+# Welcome, crawlers. A short summary for AI agents is at /llms.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://yifan2161.github.io/sitemap.xml

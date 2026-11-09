@@ -1,0 +1,8 @@
+# Yifan (Linda) Wang
+
+Yifan (Linda) Wang is a Master in Public Policy (MPP) candidate at Harvard Kennedy School, concentrating in Technology Policy. Wang's research examines how social institutions, organizational practices, and technological change shape human behavior and inequality, with a focus on gender and workplace inequality and on gender and artificial intelligence.
+
+- Home and bio: https://yifan2161.github.io/
+- Research, publications, presentations: https://yifan2161.github.io/research/
+- CV (PDF): https://yifan2161.github.io/files/cv.pdf
+- Contact: yifan_wang@hks.harvard.edu
