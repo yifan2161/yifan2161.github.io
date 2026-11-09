@@ -12,7 +12,7 @@ params:
   tagline: "I study how social institutions, organizational practices, and technological change shape human behavior and inequality."
   email: "yifan_wang@hks.harvard.edu"
   linkedin: "https://www.linkedin.com/in/linda-wang-519260267"
-  photo: "images/photo-square.jpg"
+  photo: "images/photo.jpg"
   ogImage: "images/photo.jpg"
   mysite:
     credit: true
